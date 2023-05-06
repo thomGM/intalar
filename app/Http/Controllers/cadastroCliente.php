@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Cliente;
 
 class cadastroCliente extends Controller
 {
-    $cliente = new Cliente;
+    public function cadastrarCliente(Request $request)
+    {
+        $cliente = new Cliente;
         $cliente->nome = $request->input('nomecliente');
         $cliente->cpf_cnpj = $request->input('idcliente');
         $cliente->aniversario = $request->input('aniversario');
@@ -20,4 +23,5 @@ class cadastroCliente extends Controller
         $cliente->save();
     
         return view('sucesso');
+    }
 }
