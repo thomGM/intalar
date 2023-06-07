@@ -49,6 +49,7 @@ Route::middleware('auth')->group(function () {
 
 Route::post('/cadastrar-cliente', [\App\Http\Controllers\cadastroCliente::class, 'cadastrarCliente'])->name('cadastro.cliente');
 Route::post('/cadastrar-servico', [\App\Http\Controllers\OrdemServico::class, 'cadastrarOrdemDeServico'])->name('servico.cadastrar');
+Route::post('/atualizar-servico', [\App\Http\Controllers\OrdemServico::class, 'atualizarServico'])->name('servico.atualizar');
 Route::post('/layoutServ', [\App\Http\Controllers\OrdemServico::class, 'listarServicosTabela'])->name('lista.servico');
 
 require __DIR__.'/auth.php';

@@ -3,7 +3,7 @@ use Illuminate\Http\Request;
 use App\Models\Servico;
 
 $request = Request::capture();
-$id = $request->input('id', '');
+$id = $request->input('id');
 
 $OrdemServico = Servico::where('id', $id)->first();
 
@@ -19,8 +19,10 @@ $OrdemServico = Servico::where('id', $id)->first();
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
+                <form method="POST" action="atualizar-servico">
                 @csrf
-                <form>
+
+                        <input type="hidden" name="id" value="<?= $id ?>">
                         Solicitante: <input type="text" name="solicitante" required value="<?=$OrdemServico->solicitante;?>"/></br>
                         Responsável pelo serviço: <input type="text" name="responsavel"required value="<?=$OrdemServico->responsavel_servico;?>"/></br>
                         Defeito: <input type="text" name="defeito" required value="<?= $OrdemServico->defeito;?>"/></br>
@@ -39,7 +41,6 @@ $OrdemServico = Servico::where('id', $id)->first();
                         Preço Unitário: <input type="text" name="punidade"required value="<?=$OrdemServico->valor_unitario;?>"/></br>
                         Quantidade: <input type="number" name="pquantidade"required value="<?=$OrdemServico->quantidade;?>"/></br>
                         Valor: <input type="text" name="vtotal"required value="<?=$OrdemServico->valortotal;?>"/></br>
-    
                         <button type="submit">Salvar</button>    
                     </form>
              
