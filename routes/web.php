@@ -32,6 +32,15 @@ Route::get('/ordemServico', function () {
     return view('ordemServico');
 })->middleware(['auth', 'verified'])->name('ordemServico');
 
+Route::get('/layoutServ', function () {
+    return view('layoutServ');
+})->middleware(['auth', 'verified'])->name('layoutServ');
+
+Route::get('/servUp', function () {
+   // $id = request('id');
+    return view('servUp');
+})->middleware(['auth', 'verified'])->name('servUp');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -40,5 +49,6 @@ Route::middleware('auth')->group(function () {
 
 Route::post('/cadastrar-cliente', [\App\Http\Controllers\cadastroCliente::class, 'cadastrarCliente'])->name('cadastro.cliente');
 Route::post('/cadastrar-servico', [\App\Http\Controllers\OrdemServico::class, 'cadastrarOrdemDeServico'])->name('servico.cadastrar');
+Route::post('/layoutServ', [\App\Http\Controllers\OrdemServico::class, 'listarServicosTabela'])->name('lista.servico');
 
 require __DIR__.'/auth.php';

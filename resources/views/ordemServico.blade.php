@@ -23,7 +23,7 @@
                     Hora Fim: <input type="time" name="hfim"required/></br>
                     Atividade: <input type="text" name="atividade"required/></br>
                     Técnico: <input type="text" name="tecnico"required/></br>
-                    Tempo Total: <input type="time" name="tempototal"required/></br></br>
+                    Data: <input type="date" name="data"required/></br></br>
                     <h2>Peças</h2>
                     Descrição: <input type="text" name="pdescricao"required/></br>
                     Tipo: <input type="text" name="peca"required/></br>

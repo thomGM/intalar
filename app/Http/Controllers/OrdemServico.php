@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Servico;
+use Illuminate\Support\Facades\View;
 
 use Illuminate\Http\Request;
 
@@ -20,7 +21,7 @@ class OrdemServico extends Controller
         $OrdemServico->hora_fim = $request->input('hfim');
         $OrdemServico->Atividade = $request->input('atividade');
         $OrdemServico->tecnico = $request->input('tecnico');
-        $OrdemServico->tempo_total = $request->input('tempototal'); 
+        $OrdemServico->data = $request->input('data'); 
         $OrdemServico->descricao = $request->input('pdescricao');
         $OrdemServico->pecas = $request->input('peca');
         $OrdemServico->valor_unitario = $request->input('punidade');
@@ -30,4 +31,5 @@ class OrdemServico extends Controller
     
         return view('sucesso');
     }
+
 }
