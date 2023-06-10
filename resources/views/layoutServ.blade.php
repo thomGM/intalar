@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
 <?php
 use App\Models\Servico;
 ?>
@@ -13,7 +14,7 @@ use App\Models\Servico;
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
                 @csrf
-                <table>
+                <table class="table table-striped table-hover">
                     <tr>
                         <th>Numero</th>
                         <th>Solicitante</th>
