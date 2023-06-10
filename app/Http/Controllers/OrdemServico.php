@@ -29,7 +29,7 @@ class OrdemServico extends Controller
         $OrdemServico->valortotal = $request->input('vtotal');
         $OrdemServico->save();
     
-        return view('sucesso');
+        return redirect()->route('layoutServ');
     }
 
     public function atualizarServico(Request $request)

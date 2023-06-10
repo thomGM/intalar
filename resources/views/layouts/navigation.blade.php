@@ -18,6 +18,9 @@
                     <x-nav-link :href="route('cadastro_cliente')" :active="request()->routeIs('cadastro_cliente')">
                         {{ __('Cadastro Cliente') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('listaCliente')" :active="request()->routeIs('lista_cliente')">
+                        {{ __('Lista Clientes') }}
+                    </x-nav-link>
                     <x-nav-link :href="route('ordemServico')" :active="request()->routeIs('ordemServico')">
                         {{ __('Ordem de Serviço') }}
                     </x-nav-link>
