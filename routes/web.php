@@ -3,7 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\cadastroClienteController;
-
+use App\Http\Controllers\PDFController;
+ 
 
 /*
 |--------------------------------------------------------------------------
@@ -55,6 +56,9 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::get('create-pdf-file', [PDFController::class, 'index'])->name('create-pdf-file');
+
 
 Route::post('/cadastrar-cliente', [\App\Http\Controllers\cadastroCliente::class, 'cadastrarCliente'])->name('cadastro.cliente');
 Route::post('/cadastrar-servico', [\App\Http\Controllers\OrdemServico::class, 'cadastrarOrdemDeServico'])->name('servico.cadastrar');
