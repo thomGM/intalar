@@ -67,6 +67,7 @@ Route::post('/layoutServ', [\App\Http\Controllers\OrdemServico::class, 'listarSe
 Route::post('/atualizar-cliente', [\App\Http\Controllers\cadastroCliente::class, 'atualizarCliente'])->name('lista.cliente');
 
 
+
 require __DIR__.'/auth.php';
 
 Auth::routes();

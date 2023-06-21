@@ -32,7 +32,7 @@ use App\Models\Servico;
                             echo "<td>" . $servico->Atividade . "</td>";
                             echo "<td>" . $servico->data . "</td>";
                             echo "<td>" . $servico->tecnico . "</td>";
-                            echo "<td>" . $servico->valortotal . "</td>";
+                            echo "<td>" . $servico->vtotal . "</td>";
                             echo '<td><a href="' . route('create-pdf-file', ['id' => $servico->id]) . '">' . 'Imprimir' . '</a></td>'; 
                             echo "</tr>";
                         }

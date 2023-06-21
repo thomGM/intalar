@@ -13,11 +13,14 @@ class PDFController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $id = $request->input('id');
+
         $data = [
             'title' => 'INSTALAR',
-            'date' => date('m/d/Y')
+            'date' => date('m/d/Y'),
+            'id' => $id
         ];
            
         $pdf = PDF::loadView('testPDF', $data);
