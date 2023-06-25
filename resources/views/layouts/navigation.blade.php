@@ -82,6 +82,18 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+            <x-nav-link :href="route('cadastro_cliente')" :active="request()->routeIs('cadastro_cliente')">
+                {{ __('Cadastro Cliente') }}
+            </x-nav-link>
+            <x-nav-link :href="route('listaCliente')" :active="request()->routeIs('lista_cliente')">
+                {{ __('Lista Clientes') }}
+            </x-nav-link>
+            <x-nav-link :href="route('ordemServico')" :active="request()->routeIs('ordemServico')">
+                {{ __('Ordem de Serviço') }}
+            </x-nav-link>
+            <x-nav-link :href="route('layoutServ')" :active="request()->routeIs('layoutServ')">
+                {{ __('Lista Serviços') }}
+            </x-nav-link>
         </div>
 
         <!-- Responsive Settings Options -->
